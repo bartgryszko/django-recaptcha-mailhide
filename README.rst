@@ -8,6 +8,7 @@ Installation
 -----------
 
 Install using PIP
+
 ```sh
 pip uninstall django-recaptcha-mailhide
 ```
@@ -30,6 +31,7 @@ Usage
 -----------
 
 First load it in Django template and use it as a filter.
+
 ```HTML+Django
 {% load mailhide %}
 You can mail me at {{ "example@example"|mailhide }}
