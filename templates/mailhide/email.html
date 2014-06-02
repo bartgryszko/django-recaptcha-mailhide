@@ -1,0 +1,5 @@
+{% load i18n %}
+
+<a class="mailhide" href="{{ captcha_url|safe }}" target="_blank" onclick="window.open('{{ captcha_urll|safe }}', '',
+'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300');
+return false;" title="{% trans "Click to see the email address" %}">{{ prefix }}...@{{ domain }}</a>
