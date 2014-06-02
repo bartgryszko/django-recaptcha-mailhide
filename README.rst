@@ -8,21 +8,21 @@ Installation
 -----------
 
 Install using PIP
-``
-	pip uninstall django-recaptcha-mailhide
-``
+```sh
+pip uninstall django-recaptcha-mailhide
+```
 
 Add "recaptcha-mailhide" to your INSTALLED_APPS setting like this:
 
-``
-    INSTALLED_APPS = (
-     	...
-    	'recaptcha_mailhide',
-    )
+```Python
+INSTALLED_APPS = (
+	...
+	'recaptcha_mailhide',
+)
 
-	MAILHIDE_PUBLIC_KEY = "XXX"
-	MAILHIDE_PRIVATE_KEY = "XXX"
-``
+MAILHIDE_PUBLIC_KEY = "XXX"
+MAILHIDE_PRIVATE_KEY = "XXX"
+```
 
 You can obtain public and private key for free via http://www.google.com/recaptcha/mailhide/apikey
 
@@ -30,10 +30,10 @@ Usage
 -----------
 
 First load it in Django template and use it as a filter.
-``
-	{% load mailhide %}
-	You can mail me at {{ "example@example"|mailhide }}
-``
+```HTML+Django
+{% load mailhide %}
+You can mail me at {{ "example@example"|mailhide }}
+```
 
 Credits
 -------------
