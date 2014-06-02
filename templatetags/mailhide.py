@@ -36,7 +36,7 @@ def mailhide(value):
     args['c'] = base64.urlsafe_b64encode(encrypted_value)
 
     email = value.split("@")[0]
-
+	
     if len(email) >= 6:
         prefix = email[0:3]
     elif len(email) >= 4:
@@ -44,7 +44,9 @@ def mailhide(value):
     else:
         prefix=''
 
-    href = settings.MAILHIDE_API_URL + "?" + urlencode(args)
+    domain = value.split("@")[1]
+
+    href = getattr(settings, 'MAILHIDE_API_URL', 'http://www.google.com/recaptcha/mailhide/d') + "?" + urlencode(args)
 
     return mark_safe(render_to_string(("mailhide/email.html"), {
         'domain': domain,
