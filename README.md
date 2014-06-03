@@ -10,7 +10,7 @@ Installation
 Install using PIP
 
 ```sh
-pip uninstall django-recaptcha-mailhide
+pip install django-recaptcha-mailhide
 ```
 
 Add "recaptcha-mailhide" to your INSTALLED_APPS setting like this:
