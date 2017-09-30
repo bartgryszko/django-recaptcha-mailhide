@@ -1,0 +1,7 @@
+include README.rst
+include setup.py
+
+recursive-include recaptcha_mailhide/locale *
+recursive-include recaptcha_mailhide/templates *
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
