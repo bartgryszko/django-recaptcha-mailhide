@@ -1,11 +1,10 @@
 import base64
 import binascii
 
-import sys
-if sys.version_info < (3,0):
-    from future.standard_library import install_aliases
-    install_aliases()
-from urllib.parse import urlencode
+try:
+    from urllib.parse import urlencode
+except ImportError:     # python 2
+    from urllib import urlencode
 
 from Crypto.Cipher import AES
 from django.template.loader import render_to_string

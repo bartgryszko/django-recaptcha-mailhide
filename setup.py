@@ -36,7 +36,6 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'future>=0.16.0',
         'Django>=1.10.0,<1.11',
         'pycrypto>=2.6.1',
     ],
